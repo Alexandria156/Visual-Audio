@@ -1,5 +1,9 @@
 package com.visual_audio.Subsystems.AudioParsing;
 
-public class MediaFileReader {
-    
+public interface MediaFileReader {
+
+    public String getName();
+    public float getSize();
+    public String getInfo();
+    public byte[] getAudio();
 }
