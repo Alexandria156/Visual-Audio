@@ -1,7 +1,11 @@
 package com.visual_audio.Subsystems.AudioParsing;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
 
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
@@ -62,7 +66,25 @@ public class VideoReaderAdapter implements MediaFileReader{
         if (!fileExists(file)) {
             return null;
         }
+        
+        File convertedFile = this.convertToAudio(file);
 
+        try {
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(convertedFile);
+            ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+            byte[] buffer = new byte[4096];
+            int readBytes;
+
+            while ((readBytes = audioStream.read(buffer)) != -1) {
+                byteOut.write(buffer, 0, readBytes);
+            }
+            
+            return byteOut.toByteArray();
+        } catch (Exception e) {
+            System.out.println("Could not extract file audio.");
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
