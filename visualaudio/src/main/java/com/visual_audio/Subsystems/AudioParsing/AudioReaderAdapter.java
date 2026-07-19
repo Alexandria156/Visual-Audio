@@ -69,10 +69,10 @@ public class AudioReaderAdapter implements MediaFileReader {
             byte[] buffer = new byte[4096];
             int readBytes;
 
-            while ((readBytes = audioStream.read(buffer)) != -1) 
-            {
+            while ((readBytes = audioStream.read(buffer)) != -1) {
                 byteOut.write(buffer, 0, readBytes);
             }
+            
             return byteOut.toByteArray();
         } catch (Exception e) {
             System.out.println("Could not extract file audio.");
