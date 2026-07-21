@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Grado SR60X Prestige",
+        "device_type": "headphones",
+        "sound_profile": "bright",
+        "company": "Grado",
+        "market_price": "$125.00"
+    },
+    {
+        "name": "Grado Hemp",
+        "device_type": "headphones",
+        "sound_profile": "warm",
+        "company": "Grado",
+        "market_price": "$495.00"
+    },
+    {
+        "name": "FiiO JT7",
+        "device_type": "headphones",
+        "sound_profile": "warm",
+        "company": "FiiO",
+        "market_price": "$119.99"
+    },
+    {
+        "name": "Crusher Evo",
+        "device_type": "headphones",
+        "sound_profile": "dark",
+        "company": "Skullcandy",
+        "market_price": "$209.99"
+    },
+    {
+        "name": "ATH-M40x",
+        "device_type": "headphones",
+        "sound_profile": "flat",
+        "company": "Audio-Technica",
+        "market_price": "$109.00"
+    },
+    {
+        "name": "Sony MDR-7506",
+        "device_type": "headphones",
+        "sound_profile": "flat",
+        "company": "Sony",
+        "market_price": "$113.00"
+    },
+    {
+        "name": "",
+        "device_type": "", 
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    },
+    {
+        "name": "",
+        "device_type": "",
+        "sound_profile": "",
+        "company": "",
+        "market_price": ""
+    }
+]

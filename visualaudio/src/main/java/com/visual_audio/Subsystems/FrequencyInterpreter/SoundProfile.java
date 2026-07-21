@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public enum SoundProfile {
     FLAT(20.0, 20000.0),
     BRIGHT(2000.0, 20000.0),
-    BALANCED(20.0, 20000.0),
-    VSHAPED(new double[] { 20.0, 300.0 }, new double[] { 2000.0, 20000.0 }),
+    BALANCED(new double[]{30.0, 300.0}, new double[]{2000.0, 20000.0}),
+    VSHAPED(new double[] { 20.0, 200.0 }, new double[] { 3000.0, 20000.0 }),
     BASSY(20.0, 2000.0),
     DARK(20.0, 200.0),
     ANALYTICAL(new double[] { 50.0, 500.0 }, new double[] { 1000.0, 20000.0 }),
