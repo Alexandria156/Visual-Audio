@@ -1,100 +1,254 @@
 [
     {
         "name": "Grado SR60X Prestige",
-        "device_type": "headphones",
+        "device_type": "Headphones",
         "sound_profile": "bright",
         "company": "Grado",
         "market_price": "$125.00"
     },
     {
         "name": "Grado Hemp",
-        "device_type": "headphones",
-        "sound_profile": "warm",
+        "device_type": "Headphones",
+        "sound_profile": "bassy",
         "company": "Grado",
         "market_price": "$495.00"
     },
     {
         "name": "FiiO JT7",
-        "device_type": "headphones",
+        "device_type": "Headphones",
         "sound_profile": "warm",
         "company": "FiiO",
         "market_price": "$119.99"
     },
     {
         "name": "Crusher Evo",
-        "device_type": "headphones",
+        "device_type": "Headphones",
         "sound_profile": "dark",
         "company": "Skullcandy",
         "market_price": "$209.99"
     },
     {
         "name": "ATH-M40x",
-        "device_type": "headphones",
+        "device_type": "Headphones",
         "sound_profile": "flat",
         "company": "Audio-Technica",
         "market_price": "$109.00"
     },
     {
         "name": "Sony MDR-7506",
-        "device_type": "headphones",
+        "device_type": "Headphones",
         "sound_profile": "flat",
         "company": "Sony",
         "market_price": "$113.00"
     },
     {
-        "name": "",
-        "device_type": "", 
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "ATH-S120C",
+        "device_type": "Headphones", 
+        "sound_profile": "balanced",
+        "company": "Audio-Technica",
+        "market_price": "$32.00"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "ATH-M20x",
+        "device_type": "Headphones",
+        "sound_profile": "analytical",
+        "company": "Audio-Technica",
+        "market_price": "$69.00"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "WH-1000XM5",
+        "device_type": "Headphones",
+        "sound_profile": "bassy",
+        "company": "Sony",
+        "market_price": "$248.00"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "WH-CH720N",
+        "device_type": "Headphones",
+        "sound_profile": "vshaped",
+        "company": "Sony",
+        "market_price": "$128.00"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "WH-CH520",
+        "device_type": "Headphones",
+        "sound_profile": "bassy",
+        "company": "Sony",
+        "market_price": "$49.99"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "Bose QuietComfort",
+        "device_type": "Headphones",
+        "sound_profile": "warm",
+        "company": "Bose",
+        "market_price": "$229.00"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "DT 270 PRO",
+        "device_type": "Headphones",
+        "sound_profile": "dark",
+        "company": "Beyerdynamic",
+        "market_price": "$130.99"
     },
     {
-        "name": "",
-        "device_type": "",
-        "sound_profile": "",
-        "company": "",
-        "market_price": ""
+        "name": "Celest Wyvern Black Remaster",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bright",
+        "company": "Linsoul",
+        "market_price": "$32.00"
+    },
+    {
+        "name": "CVJ ARIA",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bright",
+        "company": "Linsoul",
+        "market_price": "$79.00"
+    },
+    {
+        "name": "SIMGOT EW200",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bright",
+        "company": "Linsoul",
+        "market_price": "$45.00"
+    },
+    {
+        "name": "Nothing Headphone (1)",
+        "device_type": "Headphones",
+        "sound_profile": "dark",
+        "company": "Nothing",
+        "market_price": "$239.00"
+    },
+    {
+        "name": "HD 560S",
+        "device_type": "Headphones",
+        "sound_profile": "balanced",
+        "company": "Sennheiser",
+        "market_price": "$199.95"
+    },
+    {
+        "name": "Fidelio X2HR",
+        "device_type": "Headphones",
+        "sound_profile": "vshaped",
+        "company": "Phillips",
+        "market_price": "$159.99"
+    },
+    {
+        "name": "105 AER",
+        "device_type": "Headphones",
+        "sound_profile": "vshaped",
+        "company": "Meze",
+        "market_price": "$299.00"
+    },
+    {
+        "name": "FT1",
+        "device_type": "Headphones",
+        "sound_profile": "vshaped",
+        "company": "FiiO",
+        "market_price": "$159.99"
+    },
+    {
+        "name": "WF-1000XM4",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bassy",
+        "company": "Sony",
+        "market_price": "$306.20"
+    },
+    {
+        "name": "Smokin' Buds",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bassy",
+        "company": "Skullcandy",
+        "market_price": "$27.99"
+    },
+    {
+        "name": "Tune 520BT",
+        "device_type": "Headphones",
+        "sound_profile": "dark",
+        "company": "JBL",
+        "market_price": "$59.95"
+    },
+    {
+        "name": "Live 780NC",
+        "device_type": "Headphones",
+        "sound_profile": "bassy",
+        "company": "JBL",
+        "market_price": "$249.95"
+    },
+    {
+        "name": "Grip",
+        "device_type": "Speaker",
+        "sound_profile": "balanced",
+        "company": "JBL",
+        "market_price": "$99.95"
+    },
+    {
+        "name": "JBL Go 5",
+        "device_type": "Speaker",
+        "sound_profile": "bassy",
+        "company": "JBL",
+        "market_price": "$54.95"
+    },
+    {
+        "name": "JBL Charge 6",
+        "device_type": "Speaker",
+        "sound_profile": "vshaped",
+        "company": "JBL",
+        "market_price": "$159.95"
+    },
+    {
+        "name": "ULT Field 1",
+        "device_type": "Speaker",
+        "sound_profile": "bassy",
+        "company": "Sony",
+        "market_price": "$139.99"
+    },
+    {
+        "name": "Soundcore 2",
+        "device_type": "Speaker",
+        "sound_profile": "bright",
+        "company": "Anker",
+        "market_price": "$45.99"
+    },
+    {
+        "name": "ER2SE",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "flat",
+        "company": "Etymotic",
+        "market_price": "$149.99"
+    },
+    {
+        "name": "7Hz Zero",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "flat",
+        "company": "Linsoul",
+        "market_price": "$25.99"
+    },
+    {
+        "name": "E3000",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "flat",
+        "company": "Final Audio",
+        "market_price": "$46.70"
+    },
+    {
+        "name": "SIMGOT EA500 LM",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bright",
+        "company": "Linsoul",
+        "market_price": "$101.99"
+    },
+    {
+        "name": "YuXuanJi TPLX",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "bright",
+        "company": "Tangzu",
+        "market_price": "$45.00"
+    },
+    {
+        "name": "Canta",
+        "device_type": "In-Ear-Monitor",
+        "sound_profile": "vshaped",
+        "company": "Kiwi Ears",
+        "market_price": "$89.00"
     }
 ]
