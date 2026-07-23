@@ -31,19 +31,25 @@ public class AudioDeviceDatabase {
         return topDevices;
     }
 
-    public Device[] getLowPriceSounds(SoundProfile profile) {
+    public ArrayList<Device> getLowPriceSounds(SoundProfile profile) {
+        ArrayList<Device> topDevices = new ArrayList<Device>();
+        devices.forEach(d ->{
+            if(d.getSoundProfile().equals(profile)){
+                topDevices.add(d);
+            }
+        });
+        topDevices.sort((d1, d2) ->
+            Float.compare(d2.getMsrp(), d1.getMsrp()));
+        return topDevices;
+    }
+
+    public ArrayList<Device> getHighPriceSounds(SoundProfile profile) {
         Device[] filterDevices = {};
 
         return filterDevices;
     }
 
-    public Device[] getHighPriceSounds(SoundProfile profile) {
-        Device[] filterDevices = {};
-
-        return filterDevices;
-    }
-
-    public Device[] getCompanySounds(SoundProfile profile, String name) {
+    public ArrayList<Device> getCompanySounds(SoundProfile profile, String name) {
         Device[] filterDevices = {};
 
         return filterDevices;
