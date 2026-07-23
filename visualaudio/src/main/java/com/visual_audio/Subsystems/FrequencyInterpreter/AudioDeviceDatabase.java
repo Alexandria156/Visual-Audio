@@ -44,14 +44,24 @@ public class AudioDeviceDatabase {
     }
 
     public ArrayList<Device> getHighPriceSounds(SoundProfile profile) {
-        Device[] filterDevices = {};
-
-        return filterDevices;
+        ArrayList<Device> topDevices = new ArrayList<Device>();
+        devices.forEach(d ->{
+            if(d.getSoundProfile().equals(profile)){
+                topDevices.add(d);
+            }
+        });
+        topDevices.sort((d1, d2) ->
+            Float.compare(d1.getMsrp(), d2.getMsrp()));
+        return topDevices;
     }
 
     public ArrayList<Device> getCompanySounds(SoundProfile profile, String name) {
-        Device[] filterDevices = {};
-
-        return filterDevices;
+        ArrayList<Device> topDevices = new ArrayList<Device>();
+        devices.forEach(d ->{
+            if(d.getSoundProfile().equals(profile) && d.getCompany().equalsIgnoreCase(name)){
+                topDevices.add(d);
+            }
+        });
+        return topDevices;
     }
 }
