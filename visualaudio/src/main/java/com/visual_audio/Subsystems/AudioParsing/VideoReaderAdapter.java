@@ -102,7 +102,7 @@ public class VideoReaderAdapter implements MediaFileReader{
         encAttributes.setOutputFormat("mp3");
         encAttributes.setAudioAttributes(fileAudio);
 
-        File convertVdeo =  new File("tempFile.wav");
+        File convertVdeo =  new File("tempFile.mp3");
         try {
             encoder.encode(mmObject, convertVdeo, encAttributes);
         } 
