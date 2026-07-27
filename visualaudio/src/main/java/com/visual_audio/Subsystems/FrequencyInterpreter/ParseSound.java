@@ -52,10 +52,20 @@ public class ParseSound {
         }
         return sampledAud;
     }
-
+    //Use the Fast Fourier Transform algorithim to get the frequencies of the audio data to parse hz from low to high
     public void getFrequencies(double[] audioData){
+        int fourierSize = 1;
+        while(fourierSize <= audioData.length && fourierSize <= 2048){
+            fourierSize <<= 1;
+        }
+
+        fourierSize >>=1;
+        if(fourierSize < 2){
+            throw new IllegalArgumentException("Audio data is too short for FFT.");
+        }
 
     }
+
 
     public void getAverageLowHz(){
 
