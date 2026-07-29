@@ -53,19 +53,37 @@ public class ParseSound {
         return sampledAud;
     }
     //Use the Fast Fourier Transform algorithim to get the frequencies of the audio data to parse hz from low to high
+    //Break up method into smaller separate ones, too bulky
     public void getFrequencies(double[] audioData){
+        int fourierSize = bitShift(audioData);
+        if(fourierSize < 2){
+            throw new IllegalArgumentException("Audio data is too short for FFT.");
+        }
+        
+        double[] fourierInput = hannWindow(audioData, fourierSize);
+
+        // separate fft method
+    }
+
+    public int bitShift(double[] audioData){
         int fourierSize = 1;
         while(fourierSize <= audioData.length && fourierSize <= 2048){
             fourierSize <<= 1;
         }
-
-        fourierSize >>=1;
-        if(fourierSize < 2){
-            throw new IllegalArgumentException("Audio data is too short for FFT.");
-        }
-
+        return fourierSize >>=1;
     }
 
+    public double[] hannWindow(double[] audioData, int fourierSize){
+        double[] fourierInput = new double[fourierSize];
+        for(int i = 0; i < fourierSize; i++){
+            fourierInput[i] = audioData[i] * (0.5 - (0.5 * Math.cos((2*Math.PI*i)/(fourierSize-1))));
+        }
+        return fourierInput;
+    }
+    
+    public void fourierTransform(double[] audioInput){
+
+    }
 
     public void getAverageLowHz(){
 
