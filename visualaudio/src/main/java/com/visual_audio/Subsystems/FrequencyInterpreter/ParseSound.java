@@ -15,7 +15,7 @@ public class ParseSound {
     public ParseSound(File audioFile){
         this.audioFile = audioFile;
     }
-
+//update uml models to reflect new changes lrod
     public void changeFile(File newFile){
         try {
             this.audioFile = newFile;
@@ -53,7 +53,6 @@ public class ParseSound {
         return sampledAud;
     }
     //Use the Fast Fourier Transform algorithim to get the frequencies of the audio data to parse hz from low to high
-    //Break up method into smaller separate ones, too bulky
     public void getFrequencies(double[] audioData){
         int fourierSize = bitShift(audioData);
         if(fourierSize < 2){
@@ -93,9 +92,49 @@ public class ParseSound {
         }
 
         //call emthod for cooley tukey algorithim 
+        cooleyTukey(complexAudio, inputLen);
+        //probanly
         return complexAudio;
     }
 
+    // split & combine the audio input recursively, compute, and then combine ffts
+    //even stores real, odd stores imaginary
+    public void cooleyTukey(double[] complexAudio, int n){
+        if(n==1){
+            return;
+        }
+        int halved = n/2;
+        double[] evens = new double[2*halved];
+        double[] odds = new double[2*halved];
+
+        for(int i = 0; i < halved; i++){
+            evens[2*i] = complexAudio[4*i];
+            evens[2*i+1] = complexAudio[4*i+1]; 
+
+            odds[2*i] = complexAudio[4*i+2];
+            odds[2*i+1] = complexAudio[4*i+3];
+        }
+        //self call for evns and odds
+        this.cooleyTukey(evens, n);
+        this.cooleyTukey(odds, n);
+
+        //separate method for combining ffts
+        for(int i = 0; i < halved; i++){
+            double angle = -2*Math.PI * i/n;
+
+            double realTwiddles = Math.cos(angle);
+            double imagTwiddles = Math.sin(angle);
+
+            double realOdd = odds[2*i] * realTwiddles - odds[2*i+1] * imagTwiddles;
+            double imageOdd = odds[2*i] *realTwiddles - odds[2*i+1] * realTwiddles;
+
+            complexAudio[2*i] = evens[2*i] + realOdd;
+            complexAudio[2*i+1] = evens[2*i+1] + imageOdd;
+            complexAudio[2*i+n] = evens[2*i] - realOdd;
+            complexAudio[2*i+n+1] = evens[2*i+1] - imageOdd;
+
+        }
+    }
     public void getAverageLowHz(){
 
     }
