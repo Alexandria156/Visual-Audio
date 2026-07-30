@@ -63,6 +63,7 @@ public class ParseSound {
         double[] fourierInput = hannWindow(audioData, fourierSize);
 
         // separate fft method
+        double[] fourierResult = fourierTransform(fourierInput);
     }
 
     public int bitShift(double[] audioData){
@@ -70,7 +71,7 @@ public class ParseSound {
         while(fourierSize <= audioData.length && fourierSize <= 2048){
             fourierSize <<= 1;
         }
-        return fourierSize >>=1;
+        return fourierSize >>=1; 
     }
 
     public double[] hannWindow(double[] audioData, int fourierSize){
@@ -80,9 +81,19 @@ public class ParseSound {
         }
         return fourierInput;
     }
-    
-    public void fourierTransform(double[] audioInput){
 
+    public double[] fourierTransform(double[] audioInput){
+        int inputLen = audioInput.length;
+        double[] complexAudio = new double[2*inputLen];
+
+        for(int i = 0; i < inputLen; i++){
+            //real & imaginary
+            complexAudio[2*i] = audioInput[i];
+            complexAudio[2*i+1] = 0;
+        }
+
+        //call emthod for cooley tukey algorithim 
+        return complexAudio;
     }
 
     public void getAverageLowHz(){
