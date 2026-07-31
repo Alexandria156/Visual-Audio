@@ -132,10 +132,30 @@ public class ParseSound {
             complexAudio[2*i+1] = evens[2*i+1] + imageOdd;
             complexAudio[2*i+n] = evens[2*i] - realOdd;
             complexAudio[2*i+n+1] = evens[2*i+1] - imageOdd;
-
         }
     }
-    public void getAverageLowHz(){
+
+    public double[] magnitude(double[] results){
+        int fftlength = results.length/2;
+        double[] magnitudes = new double[fftlength];
+
+        for(int i = 0; i < fftlength; i++){
+            double real = results[2*i];
+            double fraud = results[2*i+1];
+
+            magnitudes[i] = Math.sqrt(real*real + fraud*fraud);
+        }
+
+        return magnitudes;
+    }
+     
+    public void setAverageLowHz(){
+
+    }
+    public void setAverageMidHz(){
+
+    }
+    public void setAverageHighHz(){
 
     }
 }
