@@ -6,6 +6,7 @@ import org.jaudiotagger.audio.AudioFile;
 import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.AudioHeader;
 
+//NOTE: Replace some calculations with Math.pow 
 public class ParseSound {
     private File audioFile;
     private int commonLowHz;
@@ -101,6 +102,7 @@ public class ParseSound {
     //even stores real, odd stores imaginary
     public void cooleyTukey(double[] complexAudio, int n){
         if(n==1){
+            System.out.println("Too short to perform.");
             return;
         }
         int halved = n/2;
@@ -149,13 +151,28 @@ public class ParseSound {
         return magnitudes;
     }
      
-    public void setAverageLowHz(){
+    public void setAverageLowHz(double[] magnitudes, double[] audioData){
 
     }
-    public void setAverageMidHz(){
+    public void setAverageMidHz(double[] magnitudes, double[] audioData){
 
     }
-    public void setAverageHighHz(){
+    public void setAverageHighHz(double[] magnitudes, double[] audioData){
+    
+    }
+    public double getPrevalentHz(double[] magnitudes, double[] audioData){
+        int maxBin = 1;
+        //if its faster to pass in rate as a param, remove and change
+        int sampleRate = this.getSampleRate();
+        double maxMagnitude = magnitudes[1];
 
+        for(int i = 2; i < magnitudes.length/2; i++){
+            if(magnitudes[i] > maxMagnitude){
+                maxMagnitude = magnitudes[i];
+                maxBin = i;
+            }
+        }
+        double binFrequency = maxBin*sampleRate / bitShift(audioData);
+        return binFrequency;
     }
 }
