@@ -9,9 +9,10 @@ import org.jaudiotagger.audio.AudioHeader;
 //NOTE: Replace some calculations with Math.pow 
 public class ParseSound {
     private File audioFile;
-    private int commonLowHz;
-    private int commonHighHz;
-    private int commonMidHz;
+    private double commonLowHz;
+    private double commonHighHz;
+    private double commonMidHz;
+    private double mainHz;
 
     public ParseSound(File audioFile){
         this.audioFile = audioFile;
