@@ -151,7 +151,9 @@ public class ParseSound {
 
         return magnitudes;
     }
-     
+    private double binToFrequency(int bin, int rate, int fourierSize){
+        
+    }
     public void setAverageLowHz(double[] magnitudes, double[] audioData){
 
     }
