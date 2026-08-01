@@ -150,20 +150,32 @@ public class ParseSound {
         }
 
         return magnitudes;
-    }
-    private double binToFrequency(int bin, int rate, int fourierSize){
-        
-    }
-    public void setAverageLowHz(double[] magnitudes, double[] audioData){
+    } 
 
+    private double binToFrequency(int bin, int rate, int fourierSize){
+        double binFrequency = bin*rate / fourierSize;
+        return binFrequency;
     }
+
+    public void setAverageLowHz(double[] magnitudes, double[] audioData){
+        int lowestBin = 1;
+        for(int i = 1; i < magnitudes.length; i++){
+            if(magnitudes[i] > magnitudes[1]){
+                lowestBin = i;
+            }
+        }
+        this.commonLowHz = binToFrequency(lowestBin, this.getSampleRate(), bitShift(audioData));
+    }
+
     public void setAverageMidHz(double[] magnitudes, double[] audioData){
 
     }
+
     public void setAverageHighHz(double[] magnitudes, double[] audioData){
     
     }
-    public double getPrevalentHz(double[] magnitudes, double[] audioData){
+     
+    public void setPrevalentHz(double[] magnitudes, double[] audioData){
         int maxBin = 1;
         //if its faster to pass in rate as a param, remove and change
         int sampleRate = this.getSampleRate();
@@ -175,7 +187,6 @@ public class ParseSound {
                 maxBin = i;
             }
         }
-        double binFrequency = maxBin*sampleRate / bitShift(audioData);
-        return binFrequency;
+        this.mainHz =  binToFrequency(maxBin, sampleRate, bitShift(audioData));
     }
 }
