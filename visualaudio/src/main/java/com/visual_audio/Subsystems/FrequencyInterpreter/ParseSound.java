@@ -7,18 +7,16 @@ import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.AudioHeader;
 
 //NOTE: Replace some calculations with Math.pow
-// NOTE: Come back and add documentation explaining the fft methods
+// NOTE: Come back and add/update documentation explaining the fft methods
 public class ParseSound {
     private File audioFile;
     private double commonLowHz;
     private double commonHighHz;
-    private double mainHz;
 
     public ParseSound(File audioFile) {
         this.audioFile = audioFile;
     }
 
-    // update uml models to reflect new changes lrod
     public void changeFile(File newFile) {
         try {
             this.audioFile = newFile;
@@ -40,6 +38,14 @@ public class ParseSound {
             e.printStackTrace();
             return 0;
         }
+    }
+
+    public double getCommonLowHz() {
+        return commonLowHz;
+    }
+
+    public double getCommonHighHz() {
+        return commonHighHz;
     }
 
     // method to convert the byte arrays extracted from uploaded audio into double
