@@ -188,4 +188,6 @@ public class ParseSound {
         }
         this.commonHighHz = binToFrequency(highesttBin, this.getSampleRate(), bitShift(audioData));
     }
+
+
 }
